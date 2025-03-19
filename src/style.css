@@ -1,0 +1,46 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+
+.list-container,
+.list-container ul,
+.list-container li {
+    position: relative;
+}
+
+.list-container ul {
+    list-style: none;
+    padding-left: 32px;
+}
+
+.list-container li::before,
+.list-container li::after {
+    content: "";
+    position: absolute;
+    left: -12px;
+}
+
+.list-container li::before {
+    border-top: 1px solid black;
+    top: 9px;
+    width: 8px;
+    height: 0;
+}
+
+.list-container li::after {
+    border-left: 1px solid black;
+    height: 100%;
+    width: 0;
+    top: 2px;
+}
+
+.list-container ul > li:last-child::after {
+    height: 8px;
+}
+
+.list-item {
+    cursor: pointer;
+    display: inline-block;
+}
+.list-item:hover {
+    background: gray;
+}

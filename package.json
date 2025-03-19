@@ -1,0 +1,18 @@
+{
+  "name": "connected-tree",
+  "description": "Example of connected tree",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "scripts": {
+    "serve": "vite src",
+    "build": "vite build src --outDir ../public --emptyOutDir --base ./"
+  },
+  "devDependencies": {
+    "vite": "^6.2.2"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  },
+  "author": "Rykov Dmitrii <notyourdryk@yandex.ru>",
+  "license": "MIT"
+}
