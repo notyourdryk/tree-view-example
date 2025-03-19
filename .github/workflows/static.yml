@@ -31,11 +31,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "yarn"
+      - name: Install Yarn
+        uses: mskelton/setup-yarn@v2.0.0
+        with:
+          node-version: 20
+      - name: Install dependencies
+        run: yarn
+      - name: Build
+        run: yarn build
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - run: rm -rf build
-      - run: mkdir build
-      - run: cp src/* build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
